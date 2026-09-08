@@ -1,0 +1,4 @@
+# Public site assets only. Keep source documents with personal information out of deployment.
+*.pdf
+*.hwp
+*.txt
