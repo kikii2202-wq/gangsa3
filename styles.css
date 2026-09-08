@@ -222,3 +222,7 @@ nav a{padding:0;border-radius:0;background:transparent}
 
 /* Show the complete original portrait, including the lower outfit. */
 .hero-visual img{object-fit:contain;object-position:center bottom;background:transparent}
+
+
+/* Restore the original display typeface for the metrics. */
+.number-grid strong{font-family:"DM Mono",monospace;font-weight:500}
