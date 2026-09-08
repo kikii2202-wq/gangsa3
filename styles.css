@@ -114,3 +114,99 @@ body{background:#fff;color:var(--ink)}
 @media(max-width:780px){.hero-overlay .hero-intro{display:none}}
 
 @media(max-width:780px){.hero-overlay .hero-copy{top:48px}}
+
+
+/* Restore the original page scale; only the hero photo receives a low-saturation color treatment. */
+body{letter-spacing:normal}
+.site-header{height:82px}
+nav{gap:31px;font-size:13px}
+nav a{padding:0;border-radius:0;background:transparent}
+.header-cta{display:block;padding:4px 0;border:0;border-bottom:1px solid var(--ink);border-radius:0;line-height:normal}
+.button{min-height:52px;padding:0 20px;font-size:14px;border-radius:var(--radius)}
+.hero-overlay .button{width:240px;min-height:52px;padding:0 20px;font-size:14px}
+.hero-overlay .hero-visual img{filter:grayscale(18%) saturate(.42) contrast(.98)}
+@media(max-width:780px){.site-header{height:67px}.hero-overlay .button{min-height:48px;font-size:13px}}
+
+
+/* Restore a generous, open editorial scale across the whole site. */
+@media(min-width:781px){
+  .section-shell{width:min(1280px,calc(100% - 112px))}
+  body{font-size:18px;line-height:1.68}
+  .site-header{width:min(1400px,calc(100% - 88px));height:94px}
+  .brand{font-size:16px}.brand-mark{width:36px;height:36px;font-size:11px}.brand em{font-size:10px}
+  nav{font-size:14px;gap:34px}.header-cta{font-size:14px}
+  .hero{min-height:calc(100vh - 94px);padding:96px 0 96px;gap:64px}
+  .hero h1{font-size:clamp(58px,6.3vw,94px);line-height:1.08}
+  .hero-intro{max-width:560px;margin:38px 0;font-size:18px}
+  .hero-actions{margin-top:34px}.hero-overlay .button{min-height:56px;font-size:15px}
+  .hero-visual{min-height:680px}.hero-visual figure{inset:82px 62px 0}
+  .audience,.approach,.programs,.process{padding:185px 0}.problems,.featured-case,.journey,.inquiry{padding:170px 0}
+  .section-heading{gap:48px;margin-bottom:88px}.section-heading h2,.approach h2,.problem-intro h2,.case-copy h2,.journey h2,.inquiry h2{font-size:clamp(44px,5vw,74px);line-height:1.14}
+  .section-heading>p:last-child{max-width:420px;font-size:17px}
+  h3{font-size:25px}.audience-list article{padding:36px 0}.audience-list p{font-size:16px}
+  .problem-list p{font-size:25px}.principles{margin:112px 0 104px;gap:68px}.principles p,.steps p,.program-grid p,.journey-path p,.process-list p{font-size:15px}
+  .program-feature{padding:54px}.program-feature h3{font-size:35px}.program-grid article{padding:38px;min-height:270px}.program-grid h3{font-size:28px}
+  .journey-heading{margin-bottom:92px}.journey-path article{min-height:280px;padding:26px 34px 0}.journey-path h3{font-size:29px}
+  .faq{padding:60px 0 185px;gap:48px}.faq-list summary{font-size:18px}.inquiry-layout{gap:110px}.inquiry-form{padding:44px}
+}
+@media(max-width:780px){
+  body{font-size:17px;line-height:1.65}.hero h1{font-size:56px;line-height:1.1}.hero-intro{font-size:15px}.section-heading h2,.approach h2,.problem-intro h2,.case-copy h2,.journey h2,.inquiry h2{font-size:42px;line-height:1.16}.audience,.approach,.programs,.process{padding:106px 0}.problems,.featured-case,.journey,.inquiry{padding:106px 0}
+}
+
+@media(min-width:781px){.hero-overlay .hero-visual{min-height:680px}.hero.hero-overlay{padding:96px 0}}
+
+/* Stronger low-saturation color treatment for the hero portrait. */
+.hero-overlay .hero-visual img{filter:grayscale(32%) saturate(.20) contrast(.94) sepia(.04)}
+
+
+/* Hero alignment and breathing room refinement. */
+@media(min-width:781px){
+  .hero-overlay .hero-copy{top:92px;max-width:640px}
+  .hero-overlay .hero-copy h1{font-size:clamp(66px,7vw,104px);line-height:1.16;letter-spacing:-.045em;max-width:640px}
+  .hero-overlay .hero-intro{max-width:600px;margin-top:42px;font-size:20px;line-height:1.78;letter-spacing:-.015em}
+  .hero-overlay .hero-actions{margin-top:36px}
+  .hero-overlay .hero-visual figure{bottom:-74px}
+  .hero.hero-overlay{padding-bottom:130px}
+  .numbers{margin-top:72px}
+}
+@media(max-width:780px){
+  .hero-overlay .hero-copy h1{font-size:60px;line-height:1.16;letter-spacing:-.045em}
+  .hero-overlay .hero-intro{font-size:16px;line-height:1.72}
+  .numbers{margin-top:48px}
+}
+
+
+/* Shared desktop baseline: portrait bottom = CTA bottom. */
+@media(min-width:781px){
+  .hero-overlay .hero-visual{min-height:980px}
+  .hero-overlay .hero-visual figure{top:74px;bottom:74px}
+  .hero-overlay .hero-copy{top:0;bottom:0;height:auto;padding-top:92px}
+  .hero-overlay .hero-actions{position:absolute;left:0;bottom:74px;margin:0}
+  .hero.hero-overlay{padding-bottom:150px}
+  .numbers{margin-top:0}
+}
+
+
+/* Initial two-column hero proportions, restored from the supplied reference. */
+@media(min-width:781px){
+  .section-shell{width:min(1200px,calc(100% - 80px))}
+  body{font-size:16px;line-height:1.6}
+  .site-header{width:min(1360px,calc(100% - 64px));height:82px}
+  .brand{font-size:14px}.brand-mark{width:30px;height:30px;font-size:10px}.brand em{font-size:9px}
+  nav{gap:31px;font-size:13px}.header-cta{font-size:13px}
+  .hero{min-height:calc(100vh - 82px);padding:80px 0 70px;grid-template-columns:1.02fr .98fr;gap:40px;align-items:center}
+  .hero h1{font-size:clamp(47px,5.25vw,77px);line-height:1.14;letter-spacing:-.075em}
+  .hero-intro{max-width:480px;margin:32px 0;font-size:15px;line-height:1.6}
+  .hero-actions{gap:20px;margin-top:0}.hero-actions .button{width:auto;min-width:190px;min-height:52px;padding:0 20px;font-size:14px}
+  .hero-visual{min-height:590px;overflow:hidden}.hero-visual figure{inset:74px 55px 0;transform:none;z-index:auto}.hero-visual img{object-position:center top}
+  .numbers{margin-top:0}.audience,.approach,.programs,.process{padding:155px 0}.problems,.featured-case,.journey,.inquiry{padding:145px 0}
+  .section-heading{gap:30px;margin-bottom:70px}.section-heading h2,.approach h2,.problem-intro h2,.case-copy h2,.journey h2,.inquiry h2{font-size:clamp(35px,4.5vw,62px);line-height:1.2}.section-heading>p:last-child{max-width:340px;font-size:16px}
+  h3{font-size:22px}.audience-list article{padding:28px 0}.audience-list p{font-size:14px}.problem-list p{font-size:22px}.principles{margin:95px 0 90px;gap:55px}.program-feature{padding:45px}.program-feature h3{font-size:30px}.program-grid article{padding:30px;min-height:240px}.program-grid h3{font-size:24px}.journey-path article{min-height:245px;padding:20px 28px 0}.journey-path h3{font-size:25px}.faq{padding:40px 0 160px;gap:30px}.inquiry-layout{gap:90px}.inquiry-form{padding:36px}
+}
+.hero-grid{opacity:.55;-webkit-mask-image:none;mask-image:none}
+.hero-visual img{filter:grayscale(28%) saturate(.30) contrast(.96) sepia(.03)}
+
+
+/* Compact hero CTAs only. */
+.hero-actions .button{min-width:170px;min-height:44px;padding:0 16px;font-size:13px}
+@media(max-width:780px){.hero-actions .button{min-height:42px;font-size:12px}}
