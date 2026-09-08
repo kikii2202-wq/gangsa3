@@ -226,3 +226,11 @@ nav a{padding:0;border-radius:0;background:transparent}
 
 /* Restore the original display typeface for the metrics. */
 .number-grid strong{font-family:"DM Mono",monospace;font-weight:500}
+
+
+/* Cleaner beige tape: soft wave at the front, torn edge only at the back. */
+.hero-visual figcaption{background:rgba(247,242,232,.96)!important;clip-path:polygon(3% 0,94% 0,98% 5%,95% 11%,100% 18%,95% 26%,100% 35%,95% 45%,100% 55%,95% 66%,100% 77%,95% 88%,97% 100%,3% 100%,2% 88%,3% 78%,2% 67%,3% 56%,1% 44%,3% 31%,2% 18%);box-shadow:0 7px 16px rgba(52,42,30,.12)}
+.hero-visual figcaption::before{display:none}
+
+/* Match the portrait corners to the shared button radius without clipping the tape. */
+.hero-visual figure,.hero-visual img{border-radius:var(--control-radius)}
