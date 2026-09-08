@@ -99,3 +99,18 @@ body{background:#fff;color:var(--ink)}
 .hero-overlay .hero-actions{position:relative;z-index:11;flex-wrap:nowrap}
 .hero-overlay .button-outline{display:inline-flex!important;visibility:visible!important;opacity:1!important;background:#fff!important;border:1px solid var(--ink)!important;color:var(--ink)!important}
 @media(max-width:780px){.hero-overlay .hero-copy{max-width:none}.hero-overlay .hero-actions{flex-wrap:wrap}.hero-overlay .button-outline{flex:1 1 100%}}
+
+
+/* CTA visibility guard: keep actions above the portrait and outside clip boundaries. */
+.hero-overlay .hero-visual{overflow:visible}
+.hero-overlay .hero-grid{z-index:0}
+.hero-overlay .hero-visual figure{z-index:1}
+.hero-overlay .hero-copy{z-index:20;overflow:visible}
+.hero-overlay .hero-actions{display:flex!important;position:relative;z-index:21;visibility:visible!important;opacity:1!important;overflow:visible}
+.hero-overlay .hero-actions .button{position:relative;z-index:22;visibility:visible!important;opacity:1!important}
+@media(min-width:781px){.hero-overlay .hero-actions{width:max-content;max-width:calc(100vw - 112px)}}
+@media(max-width:780px){.hero-overlay .hero-visual{overflow:visible}.hero-overlay .hero-actions{width:100%;display:grid!important;grid-template-columns:1fr;gap:10px}.hero-overlay .hero-actions .button{width:100%;flex:none}}
+
+@media(max-width:780px){.hero-overlay .hero-intro{display:none}}
+
+@media(max-width:780px){.hero-overlay .hero-copy{top:48px}}
