@@ -92,3 +92,10 @@ body{background:#fff;color:var(--ink)}
 
 /* Desktop hero annotations: shift portrait right and place its label on the photo. */
 @media(min-width:781px){.hero-overlay .hero-visual figure{transform:translateX(100px)}.hero-overlay .visual-label{left:calc(53% + 118px);top:88px;color:var(--ink);z-index:5;text-shadow:0 1px 10px rgba(255,255,255,.38)}}
+
+
+/* Keep both hero actions visibly above the portrait. */
+.hero-overlay .hero-copy{z-index:10;max-width:590px}
+.hero-overlay .hero-actions{position:relative;z-index:11;flex-wrap:nowrap}
+.hero-overlay .button-outline{display:inline-flex!important;visibility:visible!important;opacity:1!important;background:#fff!important;border:1px solid var(--ink)!important;color:var(--ink)!important}
+@media(max-width:780px){.hero-overlay .hero-copy{max-width:none}.hero-overlay .hero-actions{flex-wrap:wrap}.hero-overlay .button-outline{flex:1 1 100%}}
