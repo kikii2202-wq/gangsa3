@@ -218,3 +218,7 @@ nav a{padding:0;border-radius:0;background:transparent}
 .hero-visual{background:transparent;overflow:visible}
 .hero-visual .hero-grid{display:none}
 .hero-visual figure{background:transparent}
+
+
+/* Show the complete original portrait, including the lower outfit. */
+.hero-visual img{object-fit:contain;object-position:center bottom;background:transparent}
