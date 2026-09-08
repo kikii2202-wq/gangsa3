@@ -234,3 +234,7 @@ nav a{padding:0;border-radius:0;background:transparent}
 
 /* Match the portrait corners to the shared button radius without clipping the tape. */
 .hero-visual figure,.hero-visual img{border-radius:var(--control-radius)}
+
+/* Keep the tape free while matching the portrait to CTA corner radius. */
+.portrait-frame{position:absolute;inset:0;overflow:hidden;border-radius:var(--control-radius)}
+.portrait-frame img{border-radius:0!important}
