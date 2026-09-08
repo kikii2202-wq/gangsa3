@@ -66,7 +66,7 @@ body{background:#fff;color:var(--ink)}
 .hero-overlay .hero-copy h1{font-size:clamp(47px,5.25vw,77px);line-height:1.14;letter-spacing:-.075em;max-width:500px}
 .hero-overlay .hero-intro{margin-top:26px;padding:0;background:none}
 .hero-overlay .hero-actions{gap:18px;margin-top:26px}
-.hero-overlay .button{width:270px;min-width:0;flex:none;min-height:46px}
+.hero-overlay .button{width:240px;min-width:0;flex:none;min-height:46px}
 .hero-overlay .visual-label{top:22px;left:25px}
 .hero-overlay .hero-visual figcaption{top:96px}
 @media(max-width:780px){.hero-overlay .hero-visual{min-height:520px}.hero-overlay .hero-visual figure{inset:58px 30px 0}.hero-overlay .hero-copy{top:66px;left:28px;right:28px}.hero-overlay .hero-copy h1{font-size:48px;line-height:1.14;max-width:350px}.hero-overlay .hero-intro{display:block;font-size:13px;margin-top:18px}.hero-overlay .hero-actions{gap:10px;margin-top:20px}.hero-overlay .button{width:auto;min-width:0;flex:1;min-height:44px}.hero-overlay .visual-label{top:18px;left:24px}.hero-overlay .hero-visual figcaption{top:76px}}
