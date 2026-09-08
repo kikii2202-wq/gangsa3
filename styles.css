@@ -88,3 +88,7 @@ body{background:#fff;color:var(--ink)}
 .hero.hero-overlay{background:transparent;box-shadow:none;clip-path:none}
 .hero-overlay .hero-visual{background:transparent}
 .hero-overlay .hero-grid{background-image:linear-gradient(rgba(32,29,24,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(32,29,24,.14) 1px,transparent 1px);background-size:54px 54px;opacity:1;-webkit-mask-image:radial-gradient(ellipse 72% 68% at 50% 50%,#000 22%,rgba(0,0,0,.72) 52%,transparent 100%);mask-image:radial-gradient(ellipse 72% 68% at 50% 50%,#000 22%,rgba(0,0,0,.72) 52%,transparent 100%)}
+
+
+/* Desktop hero annotations: shift portrait right and place its label on the photo. */
+@media(min-width:781px){.hero-overlay .hero-visual figure{transform:translateX(100px)}.hero-overlay .visual-label{left:calc(53% + 118px);top:88px;color:var(--ink);z-index:5;text-shadow:0 1px 10px rgba(255,255,255,.38)}}
