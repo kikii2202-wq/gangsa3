@@ -210,3 +210,11 @@ nav a{padding:0;border-radius:0;background:transparent}
 /* Compact hero CTAs only. */
 .hero-actions .button{min-width:170px;min-height:44px;padding:0 16px;font-size:13px}
 @media(max-width:780px){.hero-actions .button{min-height:42px;font-size:12px}}
+
+
+/* Move the fading grid from the portrait frame to the hero background. */
+.hero{position:relative;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(32,29,24,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(32,29,24,.12) 1px,transparent 1px);background-size:54px 54px;-webkit-mask-image:radial-gradient(ellipse 74% 72% at 50% 50%,#000 20%,rgba(0,0,0,.62) 55%,transparent 100%);mask-image:radial-gradient(ellipse 74% 72% at 50% 50%,#000 20%,rgba(0,0,0,.62) 55%,transparent 100%);z-index:-1;pointer-events:none}
+.hero-visual{background:transparent;overflow:visible}
+.hero-visual .hero-grid{display:none}
+.hero-visual figure{background:transparent}
