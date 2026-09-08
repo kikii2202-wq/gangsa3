@@ -70,3 +70,21 @@ body{background:#fff;color:var(--ink)}
 .hero-overlay .visual-label{top:22px;left:25px}
 .hero-overlay .hero-visual figcaption{top:96px}
 @media(max-width:780px){.hero-overlay .hero-visual{min-height:520px}.hero-overlay .hero-visual figure{inset:58px 30px 0}.hero-overlay .hero-copy{top:66px;left:28px;right:28px}.hero-overlay .hero-copy h1{font-size:48px;line-height:1.14;max-width:350px}.hero-overlay .hero-intro{display:block;font-size:13px;margin-top:18px}.hero-overlay .hero-actions{gap:10px;margin-top:20px}.hero-overlay .button{width:auto;min-width:0;flex:1;min-height:44px}.hero-overlay .visual-label{top:18px;left:24px}.hero-overlay .hero-visual figcaption{top:76px}}
+
+
+/* Keep the portrait in the right-hand half on desktop. */
+@media(min-width:781px){.hero-overlay .hero-visual figure{left:53%;right:20px;top:74px;bottom:0}.hero-overlay .hero-visual img{object-position:center bottom}.hero-overlay .hero-visual figcaption{right:-32px}}
+
+.hero-overlay .text-link{display:inline-flex;align-items:center;min-height:46px;padding:0 4px;border-bottom:1px solid var(--line);white-space:nowrap}
+@media(max-width:780px){.hero-overlay .text-link{min-height:44px;font-size:12px;padding:0 2px}}
+
+
+/* Square portrait edges and a continuous full-bleed hero backdrop. */
+.hero.hero-overlay{position:relative;background:var(--sage);box-shadow:0 0 0 100vmax var(--sage);clip-path:inset(0 -100vmax)}
+.hero-overlay .hero-visual,.hero-overlay .hero-visual img{border-radius:0}
+
+
+/* Grid only: no beige fill, with lines fading out at every edge. */
+.hero.hero-overlay{background:transparent;box-shadow:none;clip-path:none}
+.hero-overlay .hero-visual{background:transparent}
+.hero-overlay .hero-grid{background-image:linear-gradient(rgba(32,29,24,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(32,29,24,.14) 1px,transparent 1px);background-size:54px 54px;opacity:1;-webkit-mask-image:radial-gradient(ellipse 72% 68% at 50% 50%,#000 22%,rgba(0,0,0,.72) 52%,transparent 100%);mask-image:radial-gradient(ellipse 72% 68% at 50% 50%,#000 22%,rgba(0,0,0,.72) 52%,transparent 100%)}
