@@ -1,0 +1,63 @@
+# 검색엔진 봇: 사이트 콘텐츠를 검색 결과에 표시할 수 있도록 허용합니다.
+User-agent: Googlebot
+Allow: /
+User-agent: Yeti
+Allow: /
+User-agent: Daumoa
+Allow: /
+User-agent: bingbot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+User-agent: Applebot
+Allow: /
+
+# 상용 AI 검색·인용 봇: AI 답변에서 이 사이트를 인용할 수 있도록 허용합니다.
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: MistralAI-User
+Allow: /
+User-agent: Amazonbot
+Allow: /
+
+# AI 학습 봇: 기본 허용이며, 학습을 원치 않으면 아래 Allow를 Disallow로 바꿉니다.
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+User-agent: Bytespider
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: Diffbot
+Allow: /
+User-agent: Webzio-Extended
+Allow: /
+User-agent: ImagesiftBot
+Allow: /
+User-agent: Timpibot
+Allow: /
+
+# 전체 기본 규칙: 일반 크롤러의 접근을 허용합니다.
+User-agent: *
+Allow: /
+
+Sitemap: https://sso-ai.vercel.app/sitemap.xml
