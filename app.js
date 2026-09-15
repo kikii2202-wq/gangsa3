@@ -16,3 +16,13 @@ const numberSection = document.querySelector('.numbers'); if (numberSection) num
 document.querySelector('.inquiry-form')?.addEventListener('submit', (event) => {
   event.preventDefault(); const data = new FormData(event.currentTarget); const subject = encodeURIComponent('[강의 문의] ' + (data.get('organization') || '')); const body = encodeURIComponent(`기관명/단체명: ${data.get('organization')}\n담당자: ${data.get('contact')}\n희망 교육 주제: ${data.get('topic')}\n교육 대상·일정: ${data.get('details')}`); window.location.href = `mailto:ssopark2202@gmail.com?subject=${subject}&body=${body}`;
 });
+
+const practiceVideos = document.querySelectorAll('.practice-video');
+const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const syncPracticeVideos = () => practiceVideos.forEach((video) => {
+  if (motionQuery.matches) { video.pause(); return; }
+  const attempt = video.play();
+  if (attempt) attempt.catch(() => video.pause());
+});
+syncPracticeVideos();
+motionQuery.addEventListener?.('change', syncPracticeVideos);
