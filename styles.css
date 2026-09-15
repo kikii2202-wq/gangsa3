@@ -238,3 +238,15 @@ nav a{padding:0;border-radius:0;background:transparent}
 /* Keep the tape free while matching the portrait to CTA corner radius. */
 .portrait-frame{position:absolute;inset:0;overflow:hidden;border-radius:var(--control-radius)!important}
 .portrait-frame img{border-radius:0!important}
+
+/* Classroom field image in the teaching approach section. */
+.approach-lead{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(44px,7vw,100px);align-items:end}
+.approach-lead .approach-top{max-width:500px}
+.classroom-shot{margin:0;border:1px solid var(--ink);background:#fff}
+.classroom-shot img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;filter:saturate(.74) contrast(.98) sepia(.05)}
+.classroom-shot figcaption{display:grid;grid-template-columns:auto 1fr;gap:7px 18px;align-items:baseline;padding:14px 16px 15px;border-top:1px solid var(--ink);font-family:var(--mono);line-height:1.35}
+.classroom-number{font-size:10px;letter-spacing:.06em;color:var(--muted)}
+.classroom-shot strong{font-size:12px;letter-spacing:.08em;font-weight:500}
+.classroom-caption{grid-column:1;font-family:var(--serif);font-size:13px;color:var(--muted)}
+.classroom-steps{grid-column:2;justify-self:end;font-size:10px;letter-spacing:.07em;white-space:nowrap}
+@media(max-width:780px){.approach-lead{display:grid;grid-template-columns:1fr;gap:34px}.approach-lead .approach-top{max-width:none}.classroom-shot figcaption{gap:8px 12px;padding:12px}.classroom-shot strong{font-size:11px}.classroom-caption{font-size:12px}.classroom-steps{font-size:9px}}
