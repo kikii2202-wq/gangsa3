@@ -2,3 +2,5 @@
 *.pdf
 *.hwp
 *.txt
+!robots.txt
+!llms.txt
