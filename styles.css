@@ -275,3 +275,16 @@ nav a{padding:0;border-radius:0;background:transparent}
 .privacy-consent{display:flex!important;align-items:center;gap:8px;margin:0 0 9px!important;font-size:12px!important;cursor:pointer}.privacy-consent input{width:15px!important;height:15px;accent-color:var(--ink)}
 .submit-wrap{display:block;position:relative}.submit-wrap .button{width:100%;margin-top:0}.submit-wrap .button:disabled{opacity:.46;cursor:not-allowed;transform:none}.privacy-error{margin:0 0 8px;color:#9a3c2e;font-size:12px}.inquiry-form .form-note{text-align:left;min-height:18px}
 @media(max-width:780px){.site-header{width:100%;padding:0 20px}.site-header nav{display:none}.lab-identity{padding-left:0}.lab-identity strong{font-size:11px}.lab-identity em{font-size:8px}.site-footer{align-items:center}.site-footer .lab-identity strong{font-size:11px}.site-footer>p{font-size:9px}}
+
+/* Full-width sticky header shell; content remains aligned to the editorial grid. */
+.site-header{position:sticky;top:0;z-index:30;width:100%;height:82px;margin:0;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+.site-header-inner{width:min(1360px,calc(100% - 64px));height:100%;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.header-brand-group{display:flex;align-items:center;gap:16px;min-width:0}
+.header-brand-group .brand{font-size:14px;font-weight:800;display:flex;align-items:center;gap:10px;line-height:1.1;flex:none}
+.header-brand-group .brand-mark{width:30px;height:30px;display:grid;place-items:center;background:var(--ink);color:#fff;font:10px var(--mono)}
+.header-brand-group .brand em{display:block;margin-top:4px;font:400 9px var(--mono);font-style:normal;letter-spacing:.08em}
+.header-brand-group .lab-identity{padding:0 0 0 16px;border-left:1px solid var(--line);border-radius:0}
+.header-brand-group .lab-identity img{height:20px}
+.header-brand-group .lab-identity strong{font-size:11px}
+.header-brand-group .lab-identity em{font-size:8px}
+@media(max-width:780px){.site-header{width:100%;height:67px;padding:0}.site-header-inner{width:calc(100% - 40px)}.site-header nav{display:none}.header-brand-group{gap:10px}.header-brand-group .brand{gap:8px;font-size:12px}.header-brand-group .brand-mark{width:28px;height:28px;font-size:9px}.header-brand-group .brand em{font-size:8px;margin-top:3px}.header-brand-group .lab-identity{padding-left:10px}.header-brand-group .lab-identity img{height:18px}.header-brand-group .lab-identity strong{font-size:10px}.header-brand-group .lab-identity em{display:none}}
