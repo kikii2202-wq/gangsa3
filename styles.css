@@ -288,3 +288,9 @@ nav a{padding:0;border-radius:0;background:transparent}
 .header-brand-group .lab-identity strong{font-size:11px}
 .header-brand-group .lab-identity em{font-size:8px}
 @media(max-width:780px){.site-header{width:100%;height:67px;padding:0}.site-header-inner{width:calc(100% - 40px)}.site-header nav{display:none}.header-brand-group{gap:10px}.header-brand-group .brand{gap:8px;font-size:12px}.header-brand-group .brand-mark{width:28px;height:28px;font-size:9px}.header-brand-group .brand em{font-size:8px;margin-top:3px}.header-brand-group .lab-identity{padding-left:10px}.header-brand-group .lab-identity img{height:18px}.header-brand-group .lab-identity strong{font-size:10px}.header-brand-group .lab-identity em{display:none}}
+
+/* Center desktop navigation in the full header width, independent of brand and CTA widths. */
+@media(min-width:781px){
+  .site-header-inner{position:relative}
+  .site-header-inner>nav{position:absolute;left:50%;transform:translateX(-50%)}
+}
