@@ -295,3 +295,7 @@ nav a{padding:0;border-radius:0;background:transparent}
   .site-header-inner{position:relative}
   .site-header-inner>nav{position:absolute;left:50%;transform:translateX(-50%)}
 }
+
+/* Move the complete hero visual unit together; preserve the internal label, portrait and tape spacing. */
+.hero-overlay .hero-visual{position:relative;top:-48px;margin-bottom:-48px}
+@media(min-width:781px){.hero-overlay .hero-visual{top:-72px;margin-bottom:-72px}}
