@@ -15,7 +15,7 @@
 .hero-overlay .button{min-width:196px;min-height:46px;padding:0 18px;border-radius:12px;justify-content:space-between;font-size:.97rem}
 .hero-overlay .button-outline{display:inline-flex;align-items:center;background:#fff;color:var(--ink);border:1px solid var(--ink);text-decoration:none}
 .hero-overlay .button-outline:hover{background:var(--cream)}
-.hero-overlay .visual-label{z-index:4;left:56px;top:38px}
+.hero-overlay .visual-label{z-index:4;left:56px;top:0px}
 .hero-overlay .hero-visual figcaption{right:-28px;top:126px;width:184px;padding:14px 18px;background:rgba(201,178,139,.82);opacity:1;transform:rotate(25deg);clip-path:polygon(4% 0,96% 0,100% 5%,98% 14%,100% 25%,98% 38%,100% 51%,98% 65%,100% 78%,98% 91%,94% 100%,4% 100%,2% 94%,3% 82%,1% 70%,3% 57%,1% 44%,3% 30%,2% 16%);box-shadow:0 8px 18px rgba(52,42,30,.13)}
 .hero-overlay .hero-visual figcaption::before{display:none}
 @media(max-width:780px){.hero.hero-overlay{padding:8px 0 48px}.hero-overlay .hero-visual{min-height:820px}.hero-overlay .hero-visual figure{inset:278px 16px 16px}.hero-overlay .hero-visual img{object-position:center bottom}.hero-overlay .hero-copy{top:72px;left:28px;right:28px;max-width:none}.hero-overlay .hero-copy h1{font-size:clamp(3rem,13vw,4.5rem);max-width:390px}.hero-overlay .hero-intro{display:none}.hero-overlay .hero-actions{margin-top:24px;gap:8px}.hero-overlay .button{min-width:0;flex:1;min-height:44px;padding:0 13px;font-size:.82rem}.hero-overlay .visual-label{left:28px;top:28px;font-size:.72rem}.hero-overlay .hero-visual figcaption{right:-31px;top:302px;width:142px;padding:10px 13px;font-size:.68rem}}
