@@ -878,8 +878,23 @@ body{color:#111}
 /* Keep the enlarged mockup within the viewport without creating a horizontal page scroll. */
 html,
 body {
+  width: 100%;
   max-width: 100%;
   overflow-x: clip;
+}
+
+/* Tighter hero rhythm: halve the vertical breathing room without changing its content. */
+.hero.hero-modern {
+  min-height: 0;
+  padding-top: clamp(48px, 5vw, 74px);
+  padding-bottom: clamp(49px, 5vw, 71px);
+}
+
+@media (max-width: 780px) {
+  .hero.hero-modern {
+    padding-top: 31px;
+    padding-bottom: 36px;
+  }
 }
 
 .hero.hero-modern,
