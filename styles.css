@@ -874,3 +874,22 @@ body{color:#111}
 /* Narrow only the floating cast shadow so its centre reads denser; retain the right-side card depth. */
 .hero-modern-visual::after { left: 4%; right: 4%; }
 @media(max-width:780px){.hero-modern-visual::after{left:4%;right:4%;}}
+
+/* Keep the enlarged mockup within the viewport without creating a horizontal page scroll. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.hero.hero-modern,
+.hero-modern-visual,
+.mockup-window {
+  max-width: 100%;
+}
+
+@media (min-width: 781px) {
+  .hero-modern-visual {
+    width: 100%;
+  }
+}
