@@ -299,3 +299,578 @@ nav a{padding:0;border-radius:0;background:transparent}
 /* Move the complete hero visual unit together; preserve the internal label, portrait and tape spacing. */
 .hero-overlay .hero-visual{position:relative;top:-48px;margin-bottom:-48px}
 @media(min-width:781px){.hero-overlay .hero-visual{top:-72px;margin-bottom:-72px}}
+
+/* Modern AI practical-training hero: editorial text meets a simple browser workflow. */
+.hero.hero-modern{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,.92fr) minmax(520px,1.08fr);align-items:center;gap:clamp(58px,8vw,130px);min-height:clamp(650px,72vh,790px);padding:clamp(80px,9vw,132px) 0 clamp(82px,9vw,126px);overflow:visible}
+.hero.hero-modern::before{content:"";position:absolute;z-index:-2;inset:0 -8vw;background:radial-gradient(circle at 82% 33%,rgba(216,138,45,.15),transparent 23%),linear-gradient(116deg,#faf8f4 0%,#f4efe7 51%,#eee7dc 100%)}
+.hero.hero-modern::after{content:"";position:absolute;z-index:-1;inset:0 -8vw;background-image:linear-gradient(rgba(103,87,67,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(103,87,67,.09) 1px,transparent 1px);background-size:60px 60px;-webkit-mask-image:radial-gradient(ellipse 72% 88% at 54% 48%,#000 22%,rgba(0,0,0,.55) 53%,transparent 88%);mask-image:radial-gradient(ellipse 72% 88% at 54% 48%,#000 22%,rgba(0,0,0,.55) 53%,transparent 88%);pointer-events:none}
+.hero-modern-copy{position:relative;z-index:1;max-width:590px}
+.hero-kicker{margin:0 0 25px;font:500 10px/1.4 var(--mono);letter-spacing:.17em;color:#877868}
+.hero-modern h1{margin:0;color:#27231f;font-size:clamp(42px,3.65vw,56px);font-weight:800;line-height:1.2;letter-spacing:-.065em}
+.hero-modern h1>span{display:block;white-space:nowrap}
+.hero-modern h1 em{display:inline-block;color:#cf7927;font-style:normal;transform:skewX(-8deg);letter-spacing:-.09em}
+.hero-modern-intro{margin:27px 0 34px;color:#70675d;font-size:clamp(15px,1.2vw,18px);font-weight:500;line-height:1.72;letter-spacing:-.02em}
+.hero-modern-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-cta{display:inline-flex;align-items:center;justify-content:space-between;gap:34px;min-width:164px;height:50px;padding:0 18px;border:1px solid transparent;border-radius:9px;font-size:13px;font-weight:700;transition:background .2s ease,border-color .2s ease,box-shadow .2s ease,transform .2s ease}
+.hero-cta:hover{transform:translateY(-2px)}
+.hero-cta-primary{background:#d0822c;color:#fff;box-shadow:0 8px 18px rgba(178,105,31,.18)}
+.hero-cta-primary:hover{background:#bb6d1c;box-shadow:0 10px 22px rgba(178,105,31,.23)}
+.hero-cta-secondary{border-color:#b9ab9a;background:rgba(255,255,255,.4);color:#403933}
+.hero-cta-secondary:hover{border-color:#83735f;background:#fff}
+.hero-modern-visual{min-width:0;position:relative}
+.mockup-window{overflow:hidden;border:1px solid rgba(106,89,67,.2);border-radius:18px;background:rgba(255,255,255,.81);box-shadow:0 24px 52px rgba(72,57,40,.17),0 3px 8px rgba(72,57,40,.08);backdrop-filter:blur(12px)}
+.mockup-browser-bar{height:37px;display:flex;align-items:center;gap:6px;padding:0 15px;border-bottom:1px solid #e5ded4;background:#f8f5f0}
+.mockup-browser-bar span{width:7px;height:7px;border-radius:50%;background:#eb805c}.mockup-browser-bar span:nth-child(2){background:#ddb063}.mockup-browser-bar span:nth-child(3){background:#8eaa7a}.mockup-browser-bar i{width:40%;height:9px;margin-left:12px;border-radius:4px;background:#e7e1da}
+.mockup-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1.08fr;gap:clamp(8px,1.6vw,20px);align-items:center;padding:clamp(20px,3vw,36px)}
+.mockup-stage{min-width:0;padding:0}.stage-heading{display:flex;align-items:center;gap:8px}.stage-heading b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#f5dfc8;color:#b5671c;font:500 11px var(--mono)}.stage-heading h2{margin:0;color:#332d27;font-size:13px;letter-spacing:-.05em}.mockup-stage>p{min-height:40px;margin:8px 0 13px;color:#8a8075;font-size:9px;line-height:1.5;letter-spacing:-.035em}.mockup-arrow{color:#b4a492;font-size:18px;font-weight:300}
+.prompt-box,.process-steps span,.report-card{border:1px solid #e6dfd6;border-radius:7px;background:#fff;box-shadow:0 5px 12px rgba(71,55,37,.05)}
+.prompt-box{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:start;min-height:58px;padding:10px;color:#544b42;font-size:9px;line-height:1.45}.prompt-box small{color:#c97925}.prompt-box i{color:#d0822c;font-style:normal;font-size:12px}.mock-tags{display:flex;gap:5px;margin-top:10px}.mock-tags span{padding:3px 7px;border-radius:4px;background:#f1ede7;color:#756a5e;font-size:8px}
+.process-steps{display:grid;gap:4px}.process-steps span{padding:8px 9px;color:#5b5148;font-size:9px}.process-steps i{height:5px;color:#aa9b8b;font-style:normal;text-align:center;font-size:10px;line-height:3px}
+.mockup-result{padding:0 0 0 clamp(3px,.8vw,10px);border-left:1px solid #ebc594}.mockup-result .stage-heading b{background:#d0822c;color:#fff}.report-card{margin-top:0;padding:10px;background:linear-gradient(135deg,#fffdfa,#faead7);border-color:#edc993}.report-card strong{display:block;color:#6a4828;font-size:9px;letter-spacing:-.04em}.report-chart{height:43px;display:flex;gap:5px;align-items:end;padding:7px 3px 3px;margin:7px 0;border-bottom:1px solid #dfd2c2}.report-chart i{display:block;flex:1;border-radius:2px 2px 0 0;background:#e4c7a8}.report-chart i:nth-child(1){height:28%}.report-chart i:nth-child(2){height:46%}.report-chart i:nth-child(3){height:38%}.report-chart i:nth-child(4){height:63%}.report-chart i:nth-child(5){height:88%;background:#d0822c}.report-summary{display:grid;gap:4px}.report-summary span{height:4px;border-radius:4px;background:#e9d8c5}.report-summary span:nth-child(2){width:74%}.report-summary span:nth-child(3){width:50%}
+@media(max-width:980px){.hero.hero-modern{grid-template-columns:minmax(0,.9fr) minmax(430px,1.1fr);gap:42px}.mockup-flow{gap:9px;padding:22px}.hero-modern h1{font-size:clamp(42px,4.9vw,58px)}.hero-cta{min-width:151px;gap:18px}}
+@media(max-width:780px){.hero.hero-modern{display:flex;flex-direction:column;align-items:stretch;gap:38px;min-height:0;padding:62px 0 72px}.hero.hero-modern::before,.hero.hero-modern::after{inset:0 -20px}.hero-modern-copy{max-width:none}.hero-kicker{margin-bottom:18px;font-size:9px;letter-spacing:.13em}.hero-modern h1{font-size:clamp(38px,10.8vw,53px);line-height:1.18}.hero-modern-intro{margin:20px 0 27px;font-size:15px}.hero-modern-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.hero-cta{min-width:0;height:48px;padding:0 14px;font-size:12px;gap:8px}.mockup-window{border-radius:14px}.mockup-browser-bar{height:31px;padding:0 11px}.mockup-browser-bar i{height:7px}.mockup-flow{grid-template-columns:1fr;gap:14px;padding:18px}.mockup-stage{display:grid;grid-template-columns:114px 1fr;column-gap:13px;align-items:start}.stage-heading{grid-column:1}.mockup-stage>p{grid-column:1;min-height:0;margin:7px 0 0}.prompt-box,.process-steps,.report-card{grid-column:2;grid-row:1 / span 2;margin:0}.mockup-arrow{display:none}.mockup-result{padding:0;border-left:0}.mockup-result .stage-heading{grid-column:1}.mockup-result>p{grid-column:1}.report-card{margin:0}.mock-tags{grid-column:2;margin:6px 0 0}.process-steps{gap:3px}.process-steps span{padding:7px}.report-chart{height:35px}.hero-modern-visual{width:100%}}
+@media(max-width:430px){.hero-modern h1{font-size:38px}.hero-modern-actions{grid-template-columns:1fr}.hero-cta{width:100%}.mockup-stage{grid-template-columns:103px 1fr;column-gap:8px}.stage-heading h2{font-size:12px}.mockup-stage>p{font-size:8px}.report-card{padding:8px}.report-card strong{font-size:8px}}
+/* Refine the modern hero: white drafting grid and a restrained dimensional mockup. */
+.hero.hero-modern::before{background:radial-gradient(circle at 83% 34%,rgba(216,138,45,.09),transparent 22%),#fff}
+.hero.hero-modern::after{background-image:linear-gradient(rgba(84,91,96,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(84,91,96,.075) 1px,transparent 1px)}
+.hero-modern-visual{perspective:1500px;isolation:isolate}
+.hero-modern-visual::after{content:"";position:absolute;z-index:-1;left:6%;right:1%;bottom:-39px;height:76px;border-radius:50%;background:radial-gradient(ellipse at 50% 32%,rgba(176,163,147,.34),rgba(214,206,195,.44) 42%,rgba(236,232,226,.2) 70%,transparent 72%);filter:blur(.2px)}
+.mockup-window{transform:rotateY(-6deg) rotateX(2.5deg) rotateZ(-.45deg);transform-origin:50% 58%;box-shadow:25px 31px 56px rgba(53,48,40,.16),0 4px 10px rgba(53,48,40,.07);transition:transform .35s ease,box-shadow .35s ease}
+.hero-modern-visual:hover .mockup-window{transform:rotateY(-3deg) rotateX(1.25deg) rotateZ(-.2deg) translateY(-3px);box-shadow:29px 37px 64px rgba(53,48,40,.19),0 5px 12px rgba(53,48,40,.08)}
+@media(max-width:780px){.hero-modern-visual::after{left:4%;right:4%;bottom:-24px;height:46px}.mockup-window{transform:rotateY(-3.5deg) rotateX(1.5deg) rotateZ(-.25deg);box-shadow:14px 20px 36px rgba(53,48,40,.14),0 3px 8px rgba(53,48,40,.06)}.hero-modern-visual:hover .mockup-window{transform:rotateY(-2deg) rotateX(1deg) rotateZ(-.15deg)}}
+/* Larger hero composition, visible pedestal, and right-aligned primary navigation. */
+@media(min-width:781px){
+  .hero.hero-modern{grid-template-columns:minmax(0,.84fr) minmax(600px,1.16fr);gap:clamp(48px,6vw,94px);min-height:780px;padding-top:clamp(96px,10vw,148px);padding-bottom:clamp(98px,10vw,142px)}
+  .hero-modern h1{font-size:clamp(46px,4.05vw,62px)}
+  .hero-modern-intro{font-size:19px;margin-top:30px;margin-bottom:38px}
+  .hero-cta{height:54px;min-width:177px;font-size:14px}
+  .site-header-inner>nav{position:static;transform:none;margin-left:auto;gap:38px;font-size:15px}
+}
+.hero-modern-visual{isolation:isolate;padding-bottom:36px}
+.hero-modern-visual::before{content:"";position:absolute;z-index:0;left:7%;right:2%;bottom:0;height:62px;border:1px solid rgba(122,110,96,.13);border-radius:50% 50% 14px 14px / 42% 42% 12px 12px;background:linear-gradient(180deg,#e7e2dc 0%,#d4cdc4 29%,#c4bdb4 78%,#d9d3cb 100%);box-shadow:0 19px 25px rgba(63,55,46,.13)}
+.hero-modern-visual::after{z-index:0;left:7%;right:2%;bottom:38px;height:33px;border:1px solid rgba(255,255,255,.55);background:radial-gradient(ellipse at 50% 50%,#f1eeea 0%,#d6cec5 64%,#bdb5ab 100%);filter:none;box-shadow:inset 0 3px 7px rgba(255,255,255,.64)}
+.mockup-window{position:relative;z-index:1;transform:rotateY(-10deg) rotateX(4deg) rotateZ(-.85deg) translateY(-8px);box-shadow:31px 38px 66px rgba(53,48,40,.21),0 6px 12px rgba(53,48,40,.09)}
+.hero-modern-visual:hover .mockup-window{transform:rotateY(-6deg) rotateX(2.4deg) rotateZ(-.45deg) translateY(-13px);box-shadow:34px 43px 74px rgba(53,48,40,.24),0 7px 14px rgba(53,48,40,.11)}
+@media(max-width:780px){.hero-modern-visual{padding-bottom:23px}.hero-modern-visual::before{left:5%;right:5%;height:40px;bottom:0;border-radius:50% 50% 10px 10px / 42% 42% 8px 8px}.hero-modern-visual::after{left:5%;right:5%;bottom:24px;height:21px}.mockup-window{transform:rotateY(-6deg) rotateX(2.5deg) rotateZ(-.45deg) translateY(-4px)}.hero-modern-visual:hover .mockup-window{transform:rotateY(-4deg) rotateX(1.5deg) rotateZ(-.25deg) translateY(-7px)}}
+/* Soften the mockup material and let the hero use the full editorial width. */
+@media(min-width:781px){.hero.hero-modern{width:min(1360px,calc(100% - 80px));gap:clamp(78px,8vw,148px)}}
+.mockup-window{border-color:rgba(106,89,67,.11);background:rgba(255,255,255,.9);box-shadow:22px 27px 48px rgba(53,48,40,.12),0 3px 8px rgba(53,48,40,.045)}
+.hero-modern-visual::before{border-color:rgba(122,110,96,.07);background:linear-gradient(180deg,#efedea 0%,#e5e1dc 35%,#dcd7d0 100%);box-shadow:0 14px 22px rgba(63,55,46,.08)}
+.hero-modern-visual::after{border-color:rgba(255,255,255,.32);background:radial-gradient(ellipse at 50% 50%,#f8f7f5 0%,#e7e3de 67%,#d9d4cd 100%);box-shadow:inset 0 2px 5px rgba(255,255,255,.42)}
+.mockup-window{box-shadow:22px 27px 48px rgba(53,48,40,.12),0 3px 8px rgba(53,48,40,.045)}
+.hero-modern-visual:hover .mockup-window{box-shadow:24px 30px 52px rgba(53,48,40,.14),0 4px 9px rgba(53,48,40,.055)}
+/* Further soften the browser mockup: almost-white surfaces with only a quiet amber cue. */
+.mockup-window{border-color:rgba(93,79,62,.055);background:linear-gradient(135deg,rgba(255,255,255,.98),rgba(249,248,246,.9));box-shadow:18px 23px 42px rgba(53,48,40,.085),0 2px 6px rgba(53,48,40,.025)}
+.mockup-browser-bar{border-bottom-color:rgba(106,89,67,.07);background:rgba(250,249,247,.84)}
+.prompt-box,.process-steps span,.report-card{border-color:rgba(112,96,76,.075);box-shadow:0 4px 10px rgba(71,55,37,.026)}
+.prompt-box,.process-steps span{background:rgba(255,255,255,.72)}
+.mockup-result{border-left-color:rgba(208,130,44,.24)}
+.report-card{background:linear-gradient(135deg,#fffefd,#fcf7f1);border-color:rgba(208,130,44,.22)}
+.report-chart{border-bottom-color:rgba(149,126,102,.14)}
+.report-chart i{background:#ecd9c4}.report-summary span{background:#eee5db}
+.hero-modern-visual::before{opacity:.52;box-shadow:0 12px 20px rgba(63,55,46,.045)}
+.hero-modern-visual::after{opacity:.58}
+.mockup-window,.hero-modern-visual:hover .mockup-window{box-shadow:18px 23px 42px rgba(53,48,40,.085),0 2px 6px rgba(53,48,40,.025)}
+/* Restore readable definition inside the otherwise soft mockup. */
+.mockup-window{border-color:rgba(93,79,62,.16)}
+.mockup-browser-bar{border-bottom-color:rgba(106,89,67,.13)}
+.prompt-box,.process-steps span,.report-card{border-color:rgba(112,96,76,.18);box-shadow:0 4px 10px rgba(71,55,37,.04)}
+.mockup-result{border-left-color:rgba(208,130,44,.42)}
+.report-card{border-color:rgba(208,130,44,.42)}
+.stage-heading h2{font-size:15px;color:#302b26}.stage-heading b{width:25px;height:25px;font-size:12px}
+.mockup-stage>p{color:#766c62;font-size:10.5px;font-weight:500;line-height:1.56}
+.prompt-box,.process-steps span{color:#51483f;font-size:10.5px;font-weight:500}.process-steps span{padding:9px 10px}
+.prompt-box{min-height:64px;padding:11px}.mock-tags span{font-size:8.5px;color:#665c52}.report-card strong{font-size:10.5px;color:#5a4128}.report-summary span{background:#e4d7c8}
+@media(max-width:780px){.stage-heading h2{font-size:13px}.stage-heading b{width:23px;height:23px;font-size:11px}.mockup-stage>p{font-size:9px}.prompt-box,.process-steps span{font-size:9px}.report-card strong{font-size:9px}}
+/* Return to the original clean mockup treatment: no pedestal and no ground shadow. */
+.hero-modern-visual{padding-bottom:0}
+.hero-modern-visual::before,.hero-modern-visual::after{display:none}
+.mockup-window,.hero-modern-visual:hover .mockup-window{box-shadow:0 8px 22px rgba(53,48,40,.075);transform:rotateY(-6deg) rotateX(2deg) rotateZ(-.4deg)}
+@media(max-width:780px){.hero-modern-visual{padding-bottom:0}.mockup-window,.hero-modern-visual:hover .mockup-window{box-shadow:0 6px 16px rgba(53,48,40,.06);transform:rotateY(-3deg) rotateX(1deg) rotateZ(-.2deg)}}
+/* Keep a subtle floating-card shadow, without a pedestal or ground object. */
+.mockup-window,.hero-modern-visual:hover .mockup-window{box-shadow:0 18px 38px rgba(53,48,40,.10),0 3px 8px rgba(53,48,40,.045);transform:rotateY(-6deg) rotateX(2deg) rotateZ(-.4deg)}
+@media(max-width:780px){.mockup-window,.hero-modern-visual:hover .mockup-window{box-shadow:0 11px 24px rgba(53,48,40,.085),0 2px 5px rgba(53,48,40,.035);transform:rotateY(-3deg) rotateX(1deg) rotateZ(-.2deg)}}
+/* Return to the first warm, restrained material gradient. */
+.mockup-window{border-color:rgba(106,89,67,.11);background:linear-gradient(135deg,rgba(255,255,255,.98) 0%,rgba(252,250,247,.94) 58%,rgba(246,240,233,.88) 100%)}
+.mockup-browser-bar{background:linear-gradient(90deg,#fbfaf8,#f4efe9);border-bottom-color:rgba(106,89,67,.09)}
+.prompt-box,.process-steps span{background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(250,247,243,.74));border-color:rgba(112,96,76,.12)}
+.mockup-result{border-left-color:rgba(208,130,44,.26)}
+.report-card{background:linear-gradient(135deg,#fffefa 0%,#fdf6ee 100%);border-color:rgba(208,130,44,.28)}
+.report-chart i{background:#ead2b8}.report-chart i:nth-child(5){background:#d0822c}
+/* Pronounced floating shadow beneath the mockup card, matching the supplied reference. */
+.mockup-window,.hero-modern-visual:hover .mockup-window{box-shadow:0 28px 34px -13px rgba(51,44,36,.28),0 13px 20px -10px rgba(51,44,36,.15);transform:rotateY(-6deg) rotateX(2deg) rotateZ(-.4deg)}
+@media(max-width:780px){.mockup-window,.hero-modern-visual:hover .mockup-window{box-shadow:0 19px 26px -12px rgba(51,44,36,.24),0 9px 14px -9px rgba(51,44,36,.13);transform:rotateY(-3deg) rotateX(1deg) rotateZ(-.2deg)}}
+/* Neutral warm-gray typography: reserve amber only for intentional emphasis. */
+:root{--ink:#2d3135;--muted:#74797e;--line:#d9dcde}
+body{color:#2d3135}
+.hero-modern h1{color:#2b2f33}.hero-kicker{color:#83888d}.hero-modern-intro{color:#686e73}.hero-cta-secondary{color:#41474c;border-color:#aeb3b6}
+.stage-heading h2{color:#34393e}.mockup-stage>p{color:#73797f}.prompt-box,.process-steps span{color:#565d63}.mock-tags span{color:#687077;background:#f0f1f1}.report-card strong{color:#4a5056}.report-summary span{background:#dde0e2}
+.eyebrow,.section-heading>p:last-child,.hero-intro,.audience-list p,.principles p,.steps p,.journey-path p,.process-list p,.program-grid p,.program-feature p,.case-copy>p:not(.eyebrow),.privacy-notice td,.form-note{color:#73797f}
+.audience-list span,.principles span,.program-feature>span,.program-grid span,.journey-path span,.process-list b,.steps b,.program-meta span,.credential-row span{color:#73797f}
+.inquiry-copy>p:not(.eyebrow),.number-grid span,.program-feature p{color:#c5c9cc}
+/* Primary typography is true black; warm gray remains for secondary explanatory copy only. */
+:root{--ink:#111}
+body{color:#111}
+.hero-modern h1,.hero-modern h1 em,.hero-cta-secondary,.stage-heading h2,.prompt-box,.process-steps span,.report-card strong{color:#111}
+.site-header,.site-header a,.section-heading h2,.approach h2,.problem-intro h2,.case-copy h2,.journey h2,.inquiry h2,.audience-list h3,.principles h3,.steps h3,.journey-path h3,.process-list h3,.program-feature h3,.program-grid h3{color:#111}.hero-modern h1 em{color:#cf7927}
+.inquiry h2,.program-feature h3{color:#fff}
+/* Asymmetric cast shadow: a soft directional gradient, not a symmetric pedestal. */
+.hero-modern-visual::after{display:block;z-index:0;left:-8%;right:4%;bottom:-39px;height:78px;border:0;border-radius:50%;background:radial-gradient(ellipse at 30% 40%,rgba(59,51,42,.22) 0%,rgba(91,80,67,.13) 30%,rgba(134,122,106,.055) 54%,transparent 74%);box-shadow:none;filter:blur(8px);opacity:.78;transform:skewX(-9deg) rotate(-2deg)}
+@media(max-width:780px){.hero-modern-visual::after{left:-4%;right:5%;bottom:-23px;height:48px;filter:blur(6px);opacity:.64;transform:skewX(-7deg) rotate(-1.5deg)}}
+/* Restore the original gentle hover: lift slightly and relax the perspective. */
+.hero-modern-visual:hover .mockup-window{transform:rotateY(-3deg) rotateX(1deg) rotateZ(-.15deg) translateY(-4px);box-shadow:0 31px 38px -14px rgba(51,44,36,.30),0 14px 22px -11px rgba(51,44,36,.16)}
+@media(max-width:780px){.hero-modern-visual:hover .mockup-window{transform:rotateY(-1.8deg) rotateX(.6deg) rotateZ(-.1deg) translateY(-3px);box-shadow:0 21px 28px -13px rgba(51,44,36,.26),0 10px 15px -10px rgba(51,44,36,.14)}}
+/* Reintroduce the low cylindrical plinth beneath the mockup, with a directional cast shadow. */
+.hero-modern-visual::before{display:none}
+.hero-modern-visual::after{display:block;z-index:0;left:5%;right:1%;bottom:-38px;height:88px;border:1px solid rgba(108,102,94,.12);border-radius:50% 50% 18px 18px / 37% 37% 13px 13px;background:radial-gradient(ellipse at 50% 17%,#f2f1ef 0%,#e5e2dd 46%,#d6d2cb 70%,transparent 72%) top/100% 51px no-repeat,linear-gradient(180deg,#d9d6d0 0%,#c9c4bd 55%,#d7d3cd 100%) bottom/100% 57px no-repeat;box-shadow:-46px 27px 35px -17px rgba(54,48,40,.24),-20px 16px 22px -15px rgba(54,48,40,.13);filter:none;opacity:1;transform:skewX(-7deg) rotate(-1.5deg)}
+@media(max-width:780px){.hero-modern-visual::after{left:4%;right:3%;bottom:-24px;height:54px;border-radius:50% 50% 11px 11px / 37% 37% 8px 8px;background:radial-gradient(ellipse at 50% 17%,#f2f1ef 0%,#e2dfda 65%,transparent 69%) top/100% 31px no-repeat,linear-gradient(180deg,#d5d1cb,#c8c3bc) bottom/100% 35px no-repeat;box-shadow:-26px 17px 24px -14px rgba(54,48,40,.20),-10px 10px 15px -11px rgba(54,48,40,.11)}}
+/* Reference-matched underside: an airy asymmetric shadow only, with no visible plinth. */
+.hero-modern-visual::before{display:none}
+.hero-modern-visual::after{display:block;z-index:0;left:-9%;right:2%;bottom:-54px;height:112px;border:0;border-radius:50%;background:radial-gradient(ellipse at 34% 23%,rgba(56,49,41,.17) 0%,rgba(71,62,52,.105) 28%,rgba(110,99,87,.045) 51%,transparent 73%);box-shadow:none;filter:blur(12px);opacity:.82;transform:skewX(-8deg) rotate(-1.5deg)}
+.mockup-window,.hero-modern-visual:hover .mockup-window{box-shadow:0 22px 32px -15px rgba(51,44,36,.19),0 8px 14px -11px rgba(51,44,36,.10)}
+@media(max-width:780px){.hero-modern-visual::after{left:-5%;right:4%;bottom:-31px;height:64px;background:radial-gradient(ellipse at 34% 23%,rgba(56,49,41,.15) 0%,rgba(71,62,52,.09) 31%,transparent 74%);filter:blur(8px);opacity:.72}.mockup-window,.hero-modern-visual:hover .mockup-window{box-shadow:0 15px 23px -13px rgba(51,44,36,.16),0 5px 9px -8px rgba(51,44,36,.08)}}
+/* Fuller center, feathered edges for the floating mockup shadow. */
+.hero-modern-visual::after{left:-7%;right:3%;bottom:-55px;height:116px;background:radial-gradient(ellipse at 50% 25%,rgba(48,43,37,.22) 0%,rgba(58,51,43,.16) 22%,rgba(82,73,63,.09) 43%,rgba(116,104,91,.032) 64%,transparent 84%);filter:blur(15px);opacity:.8;transform:skewX(-5deg) rotate(-1deg)}
+@media(max-width:780px){.hero-modern-visual::after{left:-4%;right:4%;bottom:-32px;height:67px;background:radial-gradient(ellipse at 50% 25%,rgba(48,43,37,.19) 0%,rgba(58,51,43,.13) 26%,rgba(82,73,63,.06) 49%,transparent 82%);filter:blur(10px);opacity:.72}}
+/* Give the floating shadow a broader, denser central body while keeping feathered edges. */
+.hero-modern-visual::after{height:128px;bottom:-59px;background:radial-gradient(ellipse at 50% 26%,rgba(48,43,37,.255) 0%,rgba(56,49,41,.20) 29%,rgba(76,68,59,.115) 49%,rgba(112,100,88,.04) 68%,transparent 86%)}
+@media(max-width:780px){.hero-modern-visual::after{height:74px;bottom:-35px;background:radial-gradient(ellipse at 50% 26%,rgba(48,43,37,.22) 0%,rgba(56,49,41,.16) 31%,rgba(76,68,59,.075) 53%,transparent 84%)}}
+/* Defined cylindrical base: clear top ellipse and low sidewall, matched to the reference proportions. */
+.hero-modern-visual::after{display:block;z-index:0;left:9%;right:6%;bottom:-43px;height:78px;border:1px solid rgba(112,105,96,.20);border-radius:50% 50% 16px 16px / 43% 43% 14px 14px;background:radial-gradient(ellipse at 50% 23%,#f7f6f4 0%,#ece9e5 43%,#ded9d3 69%,transparent 71%) top/100% 54px no-repeat,linear-gradient(180deg,#dcd8d2 0%,#cbc5be 58%,#d5d0c9 100%) bottom/100% 52px no-repeat;box-shadow:0 17px 20px -13px rgba(53,47,40,.20);filter:none;opacity:1;transform:skewX(-5deg) rotate(-1deg)}
+@media(max-width:780px){.hero-modern-visual::after{left:8%;right:6%;bottom:-27px;height:49px;border-radius:50% 50% 10px 10px / 43% 43% 8px 8px;background:radial-gradient(ellipse at 50% 23%,#f7f6f4 0%,#e9e6e2 61%,transparent 64%) top/100% 33px no-repeat,linear-gradient(180deg,#d9d4ce,#c9c3bc) bottom/100% 32px no-repeat;box-shadow:0 11px 14px -10px rgba(53,47,40,.17)}}
+/* Reference proportions: a wide, shallow cylinder directly under the full mockup width. */
+.hero-modern-visual::after{display:block;z-index:0;left:1%;right:1%;bottom:-47px;height:72px;border:1px solid rgba(113,106,97,.28);border-radius:50% 50% 13px 13px / 40% 40% 11px 11px;background:radial-gradient(ellipse at 50% 20%,#f7f6f4 0%,#eeece8 41%,#dfdbd5 67%,transparent 69%) top/100% 49px no-repeat,linear-gradient(180deg,#ddd9d3 0%,#cbc6bf 62%,#d7d2cb 100%) bottom/100% 47px no-repeat;box-shadow:0 13px 17px -13px rgba(54,48,41,.18);filter:none;opacity:1;transform:none}
+@media(max-width:780px){.hero-modern-visual::after{left:1%;right:1%;bottom:-29px;height:46px;border-radius:50% 50% 8px 8px / 40% 40% 7px 7px;background:radial-gradient(ellipse at 50% 20%,#f7f6f4 0%,#ebe8e4 62%,transparent 65%) top/100% 30px no-repeat,linear-gradient(180deg,#d9d4ce,#c9c3bc) bottom/100% 29px no-repeat;box-shadow:0 9px 12px -10px rgba(54,48,41,.15)}}
+/* Keep the large mockup unchanged; only the reference-style floating shadow remains underneath. */
+.hero-modern-visual::before{display:none}
+.hero-modern-visual::after{display:block;z-index:0;left:-4%;right:-1%;bottom:-51px;height:96px;border:0;border-radius:50%;background:radial-gradient(ellipse at 50% 25%,rgba(56,49,41,.20) 0%,rgba(65,57,48,.14) 27%,rgba(90,80,69,.075) 48%,rgba(127,115,101,.025) 66%,transparent 82%);box-shadow:none;filter:blur(12px);opacity:.78;transform:none}
+@media(max-width:780px){.hero-modern-visual::after{left:-3%;right:-1%;bottom:-31px;height:58px;background:radial-gradient(ellipse at 50% 25%,rgba(56,49,41,.17) 0%,rgba(65,57,48,.11) 30%,rgba(90,80,69,.055) 51%,transparent 80%);filter:blur(8px);opacity:.7}}
+/* Reference-style float: the shadow follows the large card itself, with no separate base layer. */
+.hero-modern-visual::before,.hero-modern-visual::after{display:none}
+.mockup-window{box-shadow:0 17px 22px -14px rgba(52,46,39,.20),0 34px 44px -28px rgba(52,46,39,.18)}
+.hero-modern-visual:hover .mockup-window{box-shadow:0 22px 26px -15px rgba(52,46,39,.23),0 41px 50px -30px rgba(52,46,39,.20)}
+@media(max-width:780px){.mockup-window{box-shadow:0 12px 17px -12px rgba(52,46,39,.17),0 24px 30px -21px rgba(52,46,39,.15)}.hero-modern-visual:hover .mockup-window{box-shadow:0 16px 19px -13px rgba(52,46,39,.20),0 29px 34px -22px rgba(52,46,39,.17)}}
+/* Defined floating shadow: thick center with a crisp, controlled elliptical contour. */
+.hero-modern-visual::after{display:block;z-index:0;left:7%;right:4%;bottom:-42px;height:76px;border:1px solid rgba(105,97,88,.22);border-radius:50% 50% 14px 14px / 44% 44% 12px 12px;background:radial-gradient(ellipse at 50% 24%,#e9e5df 0%,#d8d2ca 52%,#c7c0b7 74%,transparent 76%) top/100% 54px no-repeat,linear-gradient(180deg,#d5cfc7 0%,#c3bcb3 68%,#d0c9c0 100%) bottom/100% 48px no-repeat;box-shadow:0 13px 15px -14px rgba(48,42,36,.14);filter:none;opacity:1;transform:none}
+.mockup-window{box-shadow:0 13px 18px -14px rgba(52,46,39,.13)}
+@media(max-width:780px){.hero-modern-visual::after{left:6%;right:4%;bottom:-27px;height:48px;border-radius:50% 50% 9px 9px / 44% 44% 7px 7px;background:radial-gradient(ellipse at 50% 24%,#e9e5df 0%,#d7d1c9 66%,transparent 69%) top/100% 33px no-repeat,linear-gradient(180deg,#d3cdc5,#c2bbb2) bottom/100% 30px no-repeat}.mockup-window{box-shadow:0 9px 12px -11px rgba(52,46,39,.11)}}
+/* Exact reference treatment: no artificial shape, only the card's layered floating shadow. */
+.hero-modern-visual::before,.hero-modern-visual::after{display:none}
+.mockup-window{box-shadow:0 17px 25px rgba(45,39,33,.11),0 45px 66px rgba(45,39,33,.075)}
+.hero-modern-visual:hover .mockup-window{box-shadow:0 21px 29px rgba(45,39,33,.13),0 50px 70px rgba(45,39,33,.09)}
+@media(max-width:780px){.mockup-window{box-shadow:0 12px 18px rgba(45,39,33,.10),0 30px 42px rgba(45,39,33,.065)}.hero-modern-visual:hover .mockup-window{box-shadow:0 15px 21px rgba(45,39,33,.12),0 34px 46px rgba(45,39,33,.08)}}
+/* A visible near-edge contour that diffuses softly through wider shadow layers. */
+.mockup-window{border-color:rgba(106,89,67,.14);box-shadow:0 9px 15px rgba(45,39,33,.105),0 25px 38px rgba(45,39,33,.065),0 52px 72px rgba(45,39,33,.026)}
+.hero-modern-visual:hover .mockup-window{box-shadow:0 12px 18px rgba(45,39,33,.12),0 29px 42px rgba(45,39,33,.075),0 58px 78px rgba(45,39,33,.032)}
+@media(max-width:780px){.mockup-window{box-shadow:0 7px 11px rgba(45,39,33,.09),0 18px 28px rgba(45,39,33,.055),0 35px 48px rgba(45,39,33,.02)}.hero-modern-visual:hover .mockup-window{box-shadow:0 9px 14px rgba(45,39,33,.11),0 21px 31px rgba(45,39,33,.065),0 39px 52px rgba(45,39,33,.026)}}
+/* Sharpen the floating-shadow core, then fade it outward. */
+.mockup-window{border-color:rgba(106,89,67,.20);box-shadow:0 15px 0 -11px rgba(45,39,33,.18),0 17px 23px rgba(45,39,33,.085),0 43px 62px rgba(45,39,33,.03)}
+.hero-modern-visual:hover .mockup-window{box-shadow:0 18px 0 -12px rgba(45,39,33,.20),0 21px 27px rgba(45,39,33,.10),0 49px 68px rgba(45,39,33,.038)}
+@media(max-width:780px){.mockup-window{border-color:rgba(106,89,67,.18);box-shadow:0 10px 0 -8px rgba(45,39,33,.16),0 12px 16px rgba(45,39,33,.075),0 30px 43px rgba(45,39,33,.025)}.hero-modern-visual:hover .mockup-window{box-shadow:0 12px 0 -9px rgba(45,39,33,.18),0 15px 19px rgba(45,39,33,.09),0 34px 47px rgba(45,39,33,.03)}}
+/* Perspective only: restore a subtle dimensional tilt without altering any other hero styling. */
+.mockup-window{transform:rotateY(-4deg) rotateX(1.5deg) rotateZ(-.25deg)}
+.hero-modern-visual:hover .mockup-window{transform:rotateY(-2deg) rotateX(.75deg) rotateZ(-.12deg) translateY(-4px)}
+@media(max-width:780px){.mockup-window{transform:rotateY(-2deg) rotateX(.75deg) rotateZ(-.12deg)}.hero-modern-visual:hover .mockup-window{transform:rotateY(-1deg) rotateX(.4deg) rotateZ(-.06deg) translateY(-3px)}}
+/* Single reference-matched floating shadow: one soft, wide card shadow only. */
+.hero-modern-visual::before,.hero-modern-visual::after{display:none}
+.mockup-window{box-shadow:0 24px 42px -8px rgba(50,44,38,.16)}
+.hero-modern-visual:hover .mockup-window{box-shadow:0 28px 46px -8px rgba(50,44,38,.18)}
+@media(max-width:780px){.mockup-window{box-shadow:0 16px 29px -7px rgba(50,44,38,.14)}.hero-modern-visual:hover .mockup-window{box-shadow:0 19px 32px -7px rgba(50,44,38,.16)}}
+
+/* Keep the enlarged desktop mockup width; the shadow rules above do not reduce the card. */
+@media (min-width: 781px) {
+  .hero-modern-visual {
+    width: 112%;
+    max-width: none;
+  }
+}
+
+
+/* Reference shadow: a shallow, outlined oval with a denser, raised centre and feathered edges. */
+.hero-modern-visual::before { display: none; }
+.hero-modern-visual::after {
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: 0;
+  left: 3%;
+  right: 3%;
+  bottom: -48px;
+  height: 82px;
+  border: 1px solid rgba(134, 128, 119, .22);
+  border-top-color: rgba(157, 150, 140, .14);
+  border-radius: 50% 50% 46% 46% / 34% 34% 46% 46%;
+  background:
+    radial-gradient(ellipse at 50% 15%, rgba(136, 129, 119, .24) 0%, rgba(153, 145, 134, .18) 27%, rgba(184, 177, 168, .09) 50%, rgba(220, 216, 210, .025) 68%, transparent 82%),
+    linear-gradient(180deg, rgba(244, 242, 239, .36) 0%, rgba(207, 202, 195, .12) 52%, transparent 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .55);
+  filter: none;
+  opacity: 1;
+  transform: none;
+}
+.mockup-window { position: relative; z-index: 1; }
+@media (max-width: 780px) {
+  .hero-modern-visual::after {
+    left: 3%; right: 3%; bottom: -30px; height: 51px;
+    border-radius: 50% 50% 46% 46% / 34% 34% 46% 46%;
+    background: radial-gradient(ellipse at 50% 15%, rgba(136,129,119,.21) 0%, rgba(153,145,134,.15) 30%, rgba(184,177,168,.07) 53%, transparent 82%);
+  }
+}
+
+
+/* Reference shadow without a drawn outline: shape is defined only by the tonal falloff. */
+.hero-modern-visual::after {
+  border: 0;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 50% 12%,
+    rgba(104, 96, 86, .23) 0%,
+    rgba(121, 112, 101, .18) 24%,
+    rgba(151, 142, 130, .115) 43%,
+    rgba(188, 182, 173, .055) 60%,
+    rgba(222, 218, 212, .018) 72%,
+    transparent 82%);
+  box-shadow: none;
+  filter: blur(1.2px);
+}
+@media (max-width: 780px) {
+  .hero-modern-visual::after {
+    border: 0;
+    background: radial-gradient(ellipse at 50% 12%, rgba(104,96,86,.20) 0%, rgba(121,112,101,.15) 26%, rgba(151,142,130,.09) 46%, rgba(188,182,173,.04) 62%, transparent 82%);
+  }
+}
+
+
+/* Crisp cut-out silhouette: no stroke, no blurred perimeter; only a clipped tonal oval. */
+.hero-modern-visual::after {
+  left: 3%;
+  right: 3%;
+  bottom: -48px;
+  height: 82px;
+  border-radius: 0;
+  clip-path: ellipse(50% 50% at 50% 50%);
+  -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+  background: radial-gradient(ellipse at 50% 9%,
+    rgba(95, 88, 79, .24) 0%,
+    rgba(112, 104, 94, .19) 26%,
+    rgba(143, 134, 122, .12) 49%,
+    rgba(177, 170, 161, .07) 70%,
+    rgba(205, 200, 193, .045) 100%);
+  filter: none;
+}
+@media (max-width: 780px) {
+  .hero-modern-visual::after {
+    left: 3%; right: 3%; bottom: -30px; height: 51px;
+    clip-path: ellipse(50% 50% at 50% 50%);
+    -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+    background: radial-gradient(ellipse at 50% 9%, rgba(95,88,79,.21) 0%, rgba(112,104,94,.16) 28%, rgba(143,134,122,.10) 53%, rgba(177,170,161,.055) 100%);
+  }
+}
+
+
+/* Solid silhouette under the card: a defined shallow base, with shading only inside its exact edge. */
+.hero-modern-visual::after {
+  left: 1%;
+  right: 1%;
+  bottom: -52px;
+  height: 84px;
+  clip-path: none;
+  -webkit-clip-path: none;
+  border-radius: 0 0 50% 50% / 0 0 82% 82%;
+  background:
+    radial-gradient(ellipse at 50% 2%, rgba(163, 155, 145, .30) 0%, rgba(184, 177, 168, .22) 35%, rgba(207, 202, 195, .13) 64%, rgba(226, 222, 217, .08) 100%),
+    linear-gradient(180deg, rgba(222, 217, 211, .33) 0%, rgba(235, 232, 228, .20) 48%, rgba(246, 244, 241, .10) 100%);
+  filter: none;
+  opacity: 1;
+}
+@media (max-width: 780px) {
+  .hero-modern-visual::after {
+    left: 1%; right: 1%; bottom: -32px; height: 53px;
+    border-radius: 0 0 50% 50% / 0 0 82% 82%;
+    background: radial-gradient(ellipse at 50% 2%, rgba(163,155,145,.26) 0%, rgba(184,177,168,.18) 38%, rgba(207,202,195,.10) 68%, rgba(226,222,217,.06) 100%);
+  }
+}
+
+
+/* Keep tonal material all the way to the silhouette edge; it ends there instead of dissolving outward. */
+.hero-modern-visual::after {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(149, 141, 131, .34) 0%, rgba(169, 161, 151, .27) 34%, rgba(191, 185, 177, .20) 66%, rgba(213, 209, 203, .16) 100%),
+    linear-gradient(180deg, rgba(217, 212, 206, .34) 0%, rgba(230, 227, 222, .25) 50%, rgba(239, 236, 232, .18) 100%);
+}
+@media (max-width: 780px) {
+  .hero-modern-visual::after {
+    background: radial-gradient(ellipse at 50% 0%, rgba(149,141,131,.30) 0%, rgba(169,161,151,.23) 36%, rgba(191,185,177,.17) 68%, rgba(213,209,203,.13) 100%);
+  }
+}
+
+
+/* Reference-light finish: defined silhouette, but with the quiet tonal density of the supplied mockup. */
+.hero-modern-visual::after {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(149, 141, 131, .22) 0%, rgba(169, 161, 151, .17) 34%, rgba(191, 185, 177, .12) 66%, rgba(213, 209, 203, .085) 100%),
+    linear-gradient(180deg, rgba(217, 212, 206, .20) 0%, rgba(230, 227, 222, .14) 50%, rgba(239, 236, 232, .095) 100%);
+}
+@media (max-width: 780px) {
+  .hero-modern-visual::after {
+    background: radial-gradient(ellipse at 50% 0%, rgba(149,141,131,.19) 0%, rgba(169,161,151,.14) 36%, rgba(191,185,177,.10) 68%, rgba(213,209,203,.07) 100%);
+  }
+}
+
+
+/* Lighter final pass: preserve the exact silhouette while reducing only its visible density. */
+.hero-modern-visual::after {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(149, 141, 131, .13) 0%, rgba(169, 161, 151, .10) 34%, rgba(191, 185, 177, .07) 66%, rgba(213, 209, 203, .045) 100%),
+    linear-gradient(180deg, rgba(217, 212, 206, .11) 0%, rgba(230, 227, 222, .075) 50%, rgba(239, 236, 232, .05) 100%);
+}
+@media (max-width: 780px) {
+  .hero-modern-visual::after {
+    background: radial-gradient(ellipse at 50% 0%, rgba(149,141,131,.11) 0%, rgba(169,161,151,.08) 36%, rgba(191,185,177,.055) 68%, rgba(213,209,203,.035) 100%);
+  }
+}
+
+
+/* Single, reference-light underside: one precise shallow silhouette, no line, haze, or layered base. */
+.hero-modern-visual::after {
+  left: 1%;
+  right: 1%;
+  bottom: -50px;
+  height: 80px;
+  border: 0;
+  border-radius: 0 0 50% 50% / 0 0 82% 82%;
+  clip-path: none;
+  -webkit-clip-path: none;
+  background: radial-gradient(ellipse at 50% 0%,
+    rgba(137, 130, 121, .115) 0%,
+    rgba(161, 155, 146, .085) 34%,
+    rgba(190, 185, 178, .060) 67%,
+    rgba(214, 210, 205, .042) 100%);
+  box-shadow: none;
+  filter: none;
+  opacity: 1;
+}
+@media (max-width: 780px) {
+  .hero-modern-visual::after {
+    left: 1%; right: 1%; bottom: -31px; height: 50px;
+    background: radial-gradient(ellipse at 50% 0%, rgba(137,130,121,.095) 0%, rgba(161,155,146,.07) 36%, rgba(190,185,178,.048) 68%, rgba(214,210,205,.032) 100%);
+  }
+}
+
+
+/* Attachment-matched treatment: the reference is a two-layer card cast shadow, not a separate underside shape. */
+.hero-modern-visual::before,
+.hero-modern-visual::after { display: none; }
+.mockup-window {
+  box-shadow:
+    0 15px 24px rgba(61, 54, 46, .085),
+    0 36px 48px rgba(61, 54, 46, .055);
+}
+.hero-modern-visual:hover .mockup-window {
+  box-shadow:
+    0 18px 28px rgba(61, 54, 46, .10),
+    0 41px 54px rgba(61, 54, 46, .065);
+}
+@media (max-width: 780px) {
+  .mockup-window { box-shadow: 0 10px 17px rgba(61,54,46,.075), 0 24px 32px rgba(61,54,46,.045); }
+  .hero-modern-visual:hover .mockup-window { box-shadow: 0 13px 20px rgba(61,54,46,.09), 0 28px 37px rgba(61,54,46,.055); }
+}
+
+
+/* Lift the fade: the cast shadow finishes much closer to the card, as in the reference. */
+.mockup-window {
+  box-shadow:
+    0 11px 19px rgba(61, 54, 46, .085),
+    0 25px 30px rgba(61, 54, 46, .050);
+}
+.hero-modern-visual:hover .mockup-window {
+  box-shadow:
+    0 14px 22px rgba(61, 54, 46, .10),
+    0 29px 34px rgba(61, 54, 46, .060);
+}
+@media (max-width: 780px) {
+  .mockup-window { box-shadow: 0 8px 13px rgba(61,54,46,.075), 0 17px 20px rgba(61,54,46,.040); }
+  .hero-modern-visual:hover .mockup-window { box-shadow: 0 10px 16px rgba(61,54,46,.09), 0 20px 23px rgba(61,54,46,.050); }
+}
+
+
+/* Corrected reference underside: a short, clearly bounded tonal volume immediately beneath the card. */
+.hero-modern-visual::after {
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: 0;
+  left: 1%;
+  right: 1%;
+  bottom: -34px;
+  height: 54px;
+  border: 0;
+  border-radius: 0 0 50% 50% / 0 0 88% 88%;
+  clip-path: none;
+  -webkit-clip-path: none;
+  background: radial-gradient(ellipse at 50% 0%, rgba(142,135,125,.115) 0%, rgba(166,159,150,.078) 42%, rgba(193,188,181,.048) 72%, rgba(218,214,209,.030) 100%);
+  box-shadow: none;
+  filter: none;
+  opacity: 1;
+  transform: none;
+}
+.mockup-window { position: relative; z-index: 1; box-shadow: 0 8px 13px rgba(61,54,46,.060); }
+.hero-modern-visual:hover .mockup-window { box-shadow: 0 11px 16px rgba(61,54,46,.070); }
+@media (max-width: 780px) {
+  .hero-modern-visual::after { left: 1%; right: 1%; bottom: -21px; height: 34px; background: radial-gradient(ellipse at 50% 0%, rgba(142,135,125,.095) 0%, rgba(166,159,150,.062) 42%, rgba(193,188,181,.038) 72%, rgba(218,214,209,.024) 100%); }
+  .mockup-window { box-shadow: 0 6px 10px rgba(61,54,46,.050); }
+}
+
+
+/* Flat underside silhouette; only the tonal gradient has a broad, quiet central concentration. */
+.hero-modern-visual::after {
+  background:
+    linear-gradient(90deg,
+      rgba(220, 216, 211, .026) 0%,
+      rgba(198, 192, 184, .045) 19%,
+      rgba(160, 153, 143, .075) 40%,
+      rgba(160, 153, 143, .075) 60%,
+      rgba(198, 192, 184, .045) 81%,
+      rgba(220, 216, 211, .026) 100%),
+    linear-gradient(180deg, rgba(173, 166, 157, .072) 0%, rgba(195, 189, 181, .050) 55%, rgba(218, 214, 209, .028) 100%);
+}
+@media (max-width: 780px) {
+  .hero-modern-visual::after {
+    background: linear-gradient(90deg, rgba(220,216,211,.022) 0%, rgba(198,192,184,.038) 19%, rgba(160,153,143,.062) 40%, rgba(160,153,143,.062) 60%, rgba(198,192,184,.038) 81%, rgba(220,216,211,.022) 100%), linear-gradient(180deg, rgba(173,166,157,.060), rgba(218,214,209,.024));
+  }
+}
+
+
+/* Feather the outermost edge until it is only barely perceptible, without changing the centre. */
+.hero-modern-visual::after {
+  background:
+    linear-gradient(90deg,
+      rgba(220,216,211,.008) 0%,
+      rgba(198,192,184,.026) 19%,
+      rgba(160,153,143,.075) 40%,
+      rgba(160,153,143,.075) 60%,
+      rgba(198,192,184,.026) 81%,
+      rgba(220,216,211,.008) 100%),
+    linear-gradient(180deg, rgba(173,166,157,.065) 0%, rgba(195,189,181,.035) 55%, rgba(218,214,209,.009) 100%);
+}
+@media (max-width:780px){.hero-modern-visual::after{background:linear-gradient(90deg,rgba(220,216,211,.007) 0%,rgba(198,192,184,.022) 19%,rgba(160,153,143,.062) 40%,rgba(160,153,143,.062) 60%,rgba(198,192,184,.022) 81%,rgba(220,216,211,.007) 100%),linear-gradient(180deg,rgba(173,166,157,.053),rgba(218,214,209,.008));}}
+
+
+/* Floating-card depth matched to the supplied reference: a close lift plus a soft, centre-weighted cast shadow. */
+.hero-modern-visual::after {
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: 0;
+  left: -6%;
+  right: -6%;
+  bottom: -57px;
+  height: 102px;
+  border: 0;
+  border-radius: 50%;
+  clip-path: none;
+  -webkit-clip-path: none;
+  background: radial-gradient(ellipse at 50% 24%,
+    rgba(62, 55, 47, .135) 0%,
+    rgba(78, 70, 61, .095) 29%,
+    rgba(111, 101, 90, .052) 53%,
+    rgba(163, 154, 145, .018) 70%,
+    transparent 82%);
+  box-shadow: none;
+  filter: blur(10px);
+  opacity: .78;
+  transform: none;
+}
+.mockup-window {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 14px 23px rgba(54, 47, 40, .105), 0 34px 48px rgba(54, 47, 40, .055);
+}
+.hero-modern-visual:hover .mockup-window {
+  box-shadow: 0 18px 27px rgba(54, 47, 40, .125), 0 40px 55px rgba(54, 47, 40, .070);
+}
+@media (max-width:780px){
+  .hero-modern-visual::after { left:-5%; right:-5%; bottom:-35px; height:64px; background:radial-gradient(ellipse at 50% 24%,rgba(62,55,47,.115) 0%,rgba(78,70,61,.078) 31%,rgba(111,101,90,.040) 55%,transparent 82%); filter:blur(7px); opacity:.72; }
+  .mockup-window { box-shadow:0 10px 16px rgba(54,47,40,.09),0 23px 32px rgba(54,47,40,.045); }
+  .hero-modern-visual:hover .mockup-window { box-shadow:0 13px 20px rgba(54,47,40,.11),0 27px 37px rgba(54,47,40,.055); }
+}
+
+
+/* Add depth on the right-hand side only, preserving the centred floating cast shadow. */
+.mockup-window {
+  box-shadow:
+    10px 16px 25px rgba(54, 47, 40, .125),
+    18px 34px 48px rgba(54, 47, 40, .060),
+    0 14px 23px rgba(54, 47, 40, .075);
+}
+.hero-modern-visual:hover .mockup-window {
+  box-shadow:
+    12px 20px 29px rgba(54, 47, 40, .145),
+    21px 40px 55px rgba(54, 47, 40, .075),
+    0 18px 27px rgba(54, 47, 40, .090);
+}
+@media(max-width:780px){
+  .mockup-window { box-shadow:7px 11px 18px rgba(54,47,40,.105),12px 24px 32px rgba(54,47,40,.050),0 10px 16px rgba(54,47,40,.06); }
+  .hero-modern-visual:hover .mockup-window { box-shadow:9px 14px 21px rgba(54,47,40,.12),15px 28px 37px rgba(54,47,40,.06),0 13px 20px rgba(54,47,40,.075); }
+}
+
+
+/* Broader, quieter right-side cast shadow for the perspective shown in the reference. */
+.mockup-window {
+  box-shadow:
+    17px 18px 38px rgba(54, 47, 40, .078),
+    31px 37px 62px rgba(54, 47, 40, .035),
+    0 14px 23px rgba(54, 47, 40, .070);
+}
+.hero-modern-visual:hover .mockup-window {
+  box-shadow:
+    20px 22px 43px rgba(54, 47, 40, .092),
+    35px 43px 68px rgba(54, 47, 40, .044),
+    0 18px 27px rgba(54, 47, 40, .082);
+}
+@media(max-width:780px){
+  .mockup-window { box-shadow:11px 12px 25px rgba(54,47,40,.067),20px 25px 40px rgba(54,47,40,.030),0 10px 16px rgba(54,47,40,.055); }
+  .hero-modern-visual:hover .mockup-window { box-shadow:14px 15px 29px rgba(54,47,40,.08),23px 30px 45px rgba(54,47,40,.038),0 13px 20px rgba(54,47,40,.065); }
+}
+
+
+/* Preserve the original shadow density; widen only its rightward reach and softness. */
+.mockup-window {
+  box-shadow:
+    17px 16px 38px rgba(54, 47, 40, .125),
+    31px 34px 62px rgba(54, 47, 40, .060),
+    0 14px 23px rgba(54, 47, 40, .075);
+}
+.hero-modern-visual:hover .mockup-window {
+  box-shadow:
+    20px 20px 43px rgba(54, 47, 40, .145),
+    35px 40px 68px rgba(54, 47, 40, .075),
+    0 18px 27px rgba(54, 47, 40, .090);
+}
+@media(max-width:780px){
+  .mockup-window { box-shadow:11px 11px 25px rgba(54,47,40,.105),20px 24px 40px rgba(54,47,40,.050),0 10px 16px rgba(54,47,40,.060); }
+  .hero-modern-visual:hover .mockup-window { box-shadow:14px 14px 29px rgba(54,47,40,.12),23px 28px 45px rgba(54,47,40,.060),0 13px 20px rgba(54,47,40,.075); }
+}
+
+
+/* Use the earlier, softer density from before the right-shadow adjustment; broaden its reach only. */
+.mockup-window {
+  box-shadow:
+    17px 16px 38px rgba(54, 47, 40, .105),
+    31px 34px 62px rgba(54, 47, 40, .055),
+    0 14px 23px rgba(54, 47, 40, .070);
+}
+.hero-modern-visual:hover .mockup-window {
+  box-shadow:
+    20px 20px 43px rgba(54, 47, 40, .125),
+    35px 40px 68px rgba(54, 47, 40, .070),
+    0 18px 27px rgba(54, 47, 40, .082);
+}
+@media(max-width:780px){
+  .mockup-window { box-shadow:11px 11px 25px rgba(54,47,40,.090),20px 24px 40px rgba(54,47,40,.045),0 10px 16px rgba(54,47,40,.055); }
+  .hero-modern-visual:hover .mockup-window { box-shadow:14px 14px 29px rgba(54,47,40,.11),23px 28px 45px rgba(54,47,40,.055),0 13px 20px rgba(54,47,40,.065); }
+}
+
+
+/* Narrow only the floating cast shadow so its centre reads denser; retain the right-side card depth. */
+.hero-modern-visual::after { left: 4%; right: 4%; }
+@media(max-width:780px){.hero-modern-visual::after{left:4%;right:4%;}}
