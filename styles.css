@@ -251,6 +251,32 @@ nav a{padding:0;border-radius:0;background:transparent}
 .classroom-caption{font-family:var(--serif);font-size:13px;color:var(--muted);text-align:right}
 @media(max-width:780px){.approach-lead{display:grid;grid-template-columns:1fr;gap:34px}.approach-lead .approach-top{max-width:none}.classroom-shot figcaption{gap:8px 12px;padding:12px}.classroom-caption{font-size:12px}}
 
+/* Horizontal classroom gallery: a tactile, editorial photo sequence. */
+.classroom-carousel{min-width:0;overflow:hidden}
+.classroom-carousel-viewport{overflow:hidden;cursor:grab;touch-action:pan-y;outline:none}
+.classroom-carousel-viewport:focus-visible{box-shadow:0 0 0 3px rgba(208,130,44,.35)}
+.classroom-carousel-track{display:flex;gap:14px;will-change:transform;transition:transform .55s cubic-bezier(.22,.61,.36,1)}
+.classroom-slide{flex:0 0 calc(84% - 7px);aspect-ratio:16/10;overflow:hidden;background:#e9e8e4;transition:opacity .4s ease}
+.classroom-slide:not(.is-active){opacity:.58}
+.classroom-slide img{display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;filter:saturate(.82) contrast(.98);transition:transform .65s cubic-bezier(.22,.61,.36,1)}
+.classroom-slide-laptop img{object-position:86% center}
+.classroom-carousel:hover .classroom-slide.is-active img{transform:scale(1.025)}
+.classroom-carousel-controls{display:flex;align-items:center;gap:10px;margin-top:14px}
+.classroom-carousel-button{display:grid;place-items:center;width:34px;height:34px;padding:0;border:1px solid rgba(17,17,17,.32);border-radius:50%;background:transparent;color:var(--ink);font:400 19px/1 var(--sans);transition:background .2s ease,color .2s ease,border-color .2s ease;cursor:pointer}
+.classroom-carousel-button:hover,.classroom-carousel-button:focus-visible{border-color:var(--orange);background:var(--orange);color:#fff;outline:none}
+.classroom-carousel-count{margin:0;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted)}
+.classroom-carousel-count .classroom-current{color:var(--ink)}
+.classroom-carousel-meta{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:15px}
+.classroom-carousel-meta figcaption{display:grid;gap:5px;position:relative;padding:11px 0 0;color:var(--ink)}
+.classroom-carousel-meta figcaption:before{content:"";position:absolute;top:0;left:0;width:44px;height:2px;background:var(--orange)}
+.classroom-meta-title{font:700 20px/1.15 var(--serif);letter-spacing:-.03em}
+.classroom-meta-description{font:500 12px/1.5 var(--serif);color:var(--muted)}
+.classroom-carousel-pagination{display:flex;align-items:center;gap:7px}
+.classroom-carousel-page{width:12px;height:12px;padding:0;border:0;border-radius:0;background:#676767;cursor:pointer;transition:background .35s ease,transform .35s ease}
+.classroom-carousel-page.is-active{background:#111;transform:scale(1.08)}
+.classroom-carousel-page:hover,.classroom-carousel-page:focus-visible{background:#111;outline:2px solid rgba(17,17,17,.28);outline-offset:3px}
+@media(max-width:780px){.classroom-carousel-track{gap:10px}.classroom-slide{flex-basis:88%}.classroom-carousel-controls{margin-top:12px}}
+
 /* Video-led problem introduction: one aligned editorial unit. */
 .problem-lead{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(42px,7vw,100px);align-items:stretch}
 .problem-lead .problem-intro{display:flex;flex-direction:column;justify-content:center}

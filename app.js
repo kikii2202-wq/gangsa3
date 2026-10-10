@@ -79,3 +79,76 @@ const syncPracticeVideos = () => practiceVideos.forEach((video) => {
 });
 syncPracticeVideos();
 motionQuery.addEventListener?.('change', syncPracticeVideos);
+
+const classroomCarousel = document.querySelector('.classroom-carousel');
+if (classroomCarousel) {
+  const viewport = classroomCarousel.querySelector('.classroom-carousel-viewport');
+  const track = classroomCarousel.querySelector('.classroom-carousel-track');
+  const slides = [...classroomCarousel.querySelectorAll('.classroom-slide')];
+  const pages = [...classroomCarousel.querySelectorAll('.classroom-carousel-page')];
+  const titleLabel = classroomCarousel.querySelector('.classroom-meta-title');
+  const descriptionLabel = classroomCarousel.querySelector('.classroom-meta-description');
+  let currentIndex = 0;
+  let pointerStartX = null;
+  let autoAdvance;
+
+  const updateCarousel = () => {
+    const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
+    const slideWidth = slides[0].getBoundingClientRect().width + gap;
+    track.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+    slides.forEach((slide, index) => slide.classList.toggle('is-active', index === currentIndex));
+    titleLabel.textContent = slides[currentIndex].dataset.title;
+    descriptionLabel.textContent = slides[currentIndex].dataset.description;
+    pages.forEach((page, index) => {
+      const isCurrent = index === currentIndex;
+      page.classList.toggle('is-active', isCurrent);
+      page.toggleAttribute('aria-current', isCurrent);
+    });
+  };
+
+  const moveCarousel = (direction) => {
+    currentIndex = (currentIndex + direction + slides.length) % slides.length;
+    updateCarousel();
+  };
+  const stopAutoAdvance = () => window.clearInterval(autoAdvance);
+  const startAutoAdvance = () => {
+    stopAutoAdvance();
+    if (!motionQuery.matches) autoAdvance = window.setInterval(() => moveCarousel(1), 4200);
+  };
+
+  pages.forEach((page, index) => page.addEventListener('click', () => {
+    currentIndex = index;
+    updateCarousel();
+    startAutoAdvance();
+  }));
+  viewport.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') { event.preventDefault(); moveCarousel(-1); startAutoAdvance(); }
+    if (event.key === 'ArrowRight') { event.preventDefault(); moveCarousel(1); startAutoAdvance(); }
+  });
+  viewport.addEventListener('pointerdown', (event) => {
+    pointerStartX = event.clientX;
+    viewport.setPointerCapture(event.pointerId);
+    viewport.style.cursor = 'grabbing';
+    stopAutoAdvance();
+  });
+  viewport.addEventListener('pointerup', (event) => {
+    if (pointerStartX === null) return;
+    const travel = event.clientX - pointerStartX;
+    if (Math.abs(travel) > 36) moveCarousel(travel < 0 ? 1 : -1);
+    pointerStartX = null;
+    viewport.style.cursor = '';
+    startAutoAdvance();
+  });
+  viewport.addEventListener('pointercancel', () => { pointerStartX = null; viewport.style.cursor = ''; startAutoAdvance(); });
+  classroomCarousel.addEventListener('pointerenter', stopAutoAdvance);
+  classroomCarousel.addEventListener('pointerleave', startAutoAdvance);
+  classroomCarousel.addEventListener('focusin', stopAutoAdvance);
+  classroomCarousel.addEventListener('focusout', (event) => {
+    if (!classroomCarousel.contains(event.relatedTarget)) startAutoAdvance();
+  });
+  document.addEventListener('visibilitychange', () => { if (document.hidden) stopAutoAdvance(); else startAutoAdvance(); });
+  window.addEventListener('resize', updateCarousel);
+  motionQuery.addEventListener?.('change', startAutoAdvance);
+  updateCarousel();
+  startAutoAdvance();
+}
