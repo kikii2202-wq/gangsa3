@@ -980,6 +980,12 @@ body {
   margin-left: 4px;
 }
 
+.resume-link-icon {
+  width: 22px;
+  height: 18px;
+  stroke-width: 2;
+}
+
 @media (max-width: 780px) {
   .resume-link {
     min-height: 44px;
