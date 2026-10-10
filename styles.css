@@ -913,14 +913,14 @@ body {
 .resume-link {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  min-height: 52px;
-  padding: 0 16px;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 14px;
   color: #3A1601;
   border: 1px solid #E4BA88;
   border-radius: 8px;
   background: transparent;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1;
@@ -939,8 +939,8 @@ body {
 
 .resume-link-icon,
 .resume-link-download {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   flex: 0 0 auto;
   fill: none;
   stroke: currentColor;
@@ -955,7 +955,7 @@ body {
 
 @media (max-width: 780px) {
   .resume-link {
-    min-height: 48px;
-    font-size: 16px;
+    min-height: 44px;
+    font-size: 15px;
   }
 }
