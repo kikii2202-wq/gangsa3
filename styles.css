@@ -56,7 +56,7 @@ body{background:#fff;color:var(--ink)}
 .program-grid article,.case-result{background:var(--cream)}
 .eyebrow span{background:var(--lime)}
 .case-result li:before,.result-arrow,.steps b,.process-list b{color:#8a6c3e}
-.result-arrow{background:#ddc5a0;color:var(--ink)}
+.result-arrow{background:#d0822c;color:var(--ink)}
 .inquiry .eyebrow,.inquiry-contact span{color:#d6bd8a}
 
 
