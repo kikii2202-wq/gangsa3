@@ -85,6 +85,7 @@ if (classroomCarousel) {
   const viewport = classroomCarousel.querySelector('.classroom-carousel-viewport');
   const track = classroomCarousel.querySelector('.classroom-carousel-track');
   const slides = [...classroomCarousel.querySelectorAll('.classroom-slide')];
+  slides[0].dataset.description = '인공지능 모델학습을 코딩으로 구현하는 학생들';
   const pages = [...classroomCarousel.querySelectorAll('.classroom-carousel-page')];
   const titleLabel = classroomCarousel.querySelector('.classroom-meta-title');
   const descriptionLabel = classroomCarousel.querySelector('.classroom-meta-description');
