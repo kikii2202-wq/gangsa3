@@ -2,5 +2,6 @@
 *.pdf
 *.hwp
 *.txt
+!assets/park-sohyun-lecture-plan.pdf
 !robots.txt
 !llms.txt
