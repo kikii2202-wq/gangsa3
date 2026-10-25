@@ -3,5 +3,6 @@
 *.hwp
 *.txt
 !assets/park-sohyun-lecture-plan.pdf
+!assets/instructor-profile.pdf
 !robots.txt
 !llms.txt
