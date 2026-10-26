@@ -273,7 +273,7 @@ nav a{padding:0;border-radius:0;background:transparent}
 .classroom-meta-title{font:700 20px/1.15 var(--serif);letter-spacing:-.03em}
 .classroom-meta-description{font:500 12px/1.5 var(--serif);color:var(--muted)}
 .classroom-carousel-pagination{display:flex;align-items:center;gap:7px}
-.classroom-carousel-page{width:12px;height:12px;padding:0;border:0;border-radius:0;background:#676767;cursor:pointer;transition:background .35s ease,transform .35s ease}
+.classroom-carousel-page{width:12px;height:12px;padding:0;border:0;border-radius:0;background:#b8b8b8;cursor:pointer;transition:background .35s ease,transform .35s ease}
 .classroom-carousel-page.is-active{background:#111;transform:scale(1.08)}
 .classroom-carousel-page:hover,.classroom-carousel-page:focus-visible{background:#111;outline:2px solid rgba(17,17,17,.28);outline-offset:3px}
 @media(max-width:780px){.classroom-carousel-track{gap:10px}.classroom-carousel-track::after{flex-basis:88%}.classroom-slide{flex-basis:88%}.classroom-carousel-controls{margin-top:12px}}
